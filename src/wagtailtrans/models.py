@@ -87,8 +87,8 @@ class Language(models.Model):
         this language
         """)
 
-    position = models.IntegerField(
-        default=0, help_text="""
+    position = models.PositiveIntegerField(
+        default=0, unique=True, help_text="""
         Language choices and translations will be displayed in this
         order
         """)
